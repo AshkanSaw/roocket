@@ -1,0 +1,701 @@
+html {
+    width: 100%;
+    height: 100%;
+    
+    body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: "Vazir";
+        position: relative;
+
+        .alert-show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .alert-hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .alert {
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 2rem;
+            background-color: rgb(255, 89, 89);
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,.25);
+            width: 25%;
+            z-index: 10;
+
+            .alert-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                progress {
+                    width: 100%;
+                    position: relative;
+                    top: 10px;
+                }
+
+                progress[value]::-webkit-progress-bar {
+                    background-color: rgb(255, 0, 0);
+                    border-radius: 2px;
+                    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.25) inset;
+                }
+
+                .alert-text {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    i {
+                        font-size: xx-large;
+                        color: white;
+                    }
+    
+                    span {
+                        font-size: large;
+                        font-weight: bold;
+                        color: white;
+                        text-align: right;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+
+            .bg {
+                width: 100%;
+                height: 25%;
+                background-image: url(./img/header1.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 0px 5px 10px rgba(0,0,0,.25);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .container {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .top {
+                    width: 80%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    position: relative;
+                    top: -50px;
+
+                    .right {
+                        width: 45%;
+                        height: fit-content;
+                        box-shadow: 0px 0px 10px rgba(0,0,0,.25);
+                        border-radius: .5rem;
+                        background-color: whitesmoke;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .money-type-selector {
+                            width: 80%;
+                            margin-top: 2rem;
+                            margin-bottom: 1.5rem;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .input {
+                                border: 1px solid gray;
+                                background-color: white;
+                                border-radius: 5px;
+                                padding: .25rem .5rem .25rem 3rem;
+                                display: flex;
+                                flex-direction: row-reverse;
+                                justify-content: flex-start;
+                                width: 100%;
+
+                                input {
+                                    position: relative;
+                                    top: 2.5px;
+                                    margin-right: .5rem;
+                                }
+                            }
+
+                            .output {
+                                border: 1px solid gray;
+                                background-color: white;
+                                border-radius: 5px;
+                                padding: .25rem .5rem .25rem 3rem;
+                                display: flex;
+                                flex-direction: row-reverse;
+                                justify-content: flex-start;
+                                width: 100%;
+                                position: relative;
+                                right: 60px;
+
+                                input {
+                                    position: relative;
+                                    top: 2.5px;
+                                    margin-right: .5rem;
+                                }
+                            }
+                        }
+
+                        .money-count {
+                            width: 80%;
+                            display: flex;
+                            flex-direction: column;
+
+                            input {
+                                text-align: right;
+                                font-family: "Vazir";
+                                width: 90%;
+                                border-radius: 5px;
+                                border: 1px solid gray;
+                                height: 25px;
+                                appearance: none;
+                                padding: .25rem 1rem;
+                                font-weight: bold;
+                                color: rgb(54, 54, 54);
+                            }
+                             
+                            input::-webkit-outer-spin-button,
+                            input::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+                            input[type=number] {
+                                -moz-appearance: textfield;
+                            }
+
+                            span {
+                                align-self: flex-end;
+                                margin-right: 2rem;
+                                margin-top: .25rem;
+                                display: none;
+                            }
+
+                            label {
+                                align-self: flex-end;
+                                margin-right: .75rem;
+                                margin-bottom: .5rem;
+                            }
+                        }
+
+                        .date {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 78%;
+
+                            label {
+                                align-self: flex-end;
+                                margin-right: .5rem;
+                                margin-bottom: .5rem;
+                            }
+
+                            .date-inputs {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+    
+                                input::-webkit-outer-spin-button,
+                                input::-webkit-inner-spin-button {
+                                    -webkit-appearance: none;
+                                    margin: 0;
+                                }
+                                input[type=number] {
+                                    -moz-appearance: textfield;
+                                }
+    
+                                input {
+                                    width: 30%;
+                                    text-align: center;
+                                    font-family: "Vazir";
+                                    border-radius: 5px;
+                                    padding: .25rem 0;
+                                    padding-top: .5rem;
+                                    border: 1px solid gray;
+                                    font-weight: bold;
+                                    color: rgb(54, 54, 54);
+                                }
+    
+                                input::placeholder {
+                                    position: relative;
+                                    top: -3px;
+                                }
+    
+                            }
+                        }
+
+                        .info-container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 78%;
+                            margin-top: 1.5rem;
+
+                            label {
+                                align-self: flex-end;
+                                margin-right: .5rem;
+                                margin-bottom: .5rem;
+                            }
+
+                            .info {
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                textarea {
+                                    width: 100%;
+                                    resize: none;
+                                    height: 100px;
+                                    padding: 10px;
+                                    font-family: "Vazir";
+                                    text-align: right;
+                                    font-weight: bold;
+                                    color: rgb(54, 54, 54);
+                                    border-radius: 5px;
+                                    border: 1px solid gray;
+                                }
+                            }
+                        }
+
+                        button {
+                            margin-top: 2rem;
+                            width: 78%;
+                            padding: .5rem 0;
+                            border: none;
+                            background-color: rgb(20, 170, 20);
+                            font-family: "Vazir";
+                            font-size: large;
+                            font-weight: 500;
+                            color: white;
+                            border-radius: 5px;
+                            margin-bottom: 2rem;
+                            cursor: pointer;
+                        }
+
+                        button:hover {
+                            background-color: green;
+                        }
+
+                        button:active {
+                            transform: scale(.95);
+                            transition: .1s ease;
+                        }
+
+                        .money-count-display {
+                            text-align: right;
+                            width: 78%;
+                            margin-top: .5rem;
+                            margin-right: .5rem;
+                            margin-bottom: 1.5rem;
+                            font-weight: bold;
+                            font-size: small;
+                            color: rgb(20, 170, 20);
+                            direction: rtl;
+                        }
+                    }
+
+                    .left {
+                        width: 45%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .header {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row-reverse;
+                            justify-content: space-around;
+                            padding: 2rem 0;
+                            background-color: whitesmoke;
+                            box-shadow: 0px 0px 10px rgba(0,0,0,.25);
+                            border-radius: .5rem;
+                            margin-bottom: 2rem;
+
+                            .breaker {
+                                width: 2px;
+                                height: 100%;
+                                background-color: rgba(122, 122, 122,.5);
+                                border-radius: 1rem;
+                            }
+
+                            .input-number {
+                                width: 40%;
+                                height: 50px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 1rem;
+                                
+                                #user-income {
+                                    direction: rtl;
+                                }
+
+                                h2 {
+                                    color: rgb(71, 71, 71);
+                                    margin: 0;
+                                }
+                                span {
+                                    font-size: x-large;
+                                    color: rgb(17, 184, 17);
+                                    font-weight: bold;
+                                    margin-top: .5rem;
+                                }
+
+                            }
+
+                            .output-number {
+                                width: 40%;
+                                height: 50px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 1rem;
+
+                                #user-outcome {
+                                    direction: rtl;
+                                }
+
+                                h2 {
+                                    color: rgb(71, 71, 71);
+                                    margin: 0;
+                                }
+                                span {
+                                    font-size: x-large;
+                                    color: rgb(224, 47, 47);
+                                    font-weight: bold;
+                                    margin-top: .5rem;
+                                }
+                                
+                            }
+                        }
+
+                        .chart {
+                            width: 100%;
+                            height: 100%;
+                            background-color: whitesmoke;
+                            box-shadow: 0px 0px 10px rgba(0,0,0,.25);
+                            border-radius: .5rem;
+                        }
+                    }
+
+                }
+
+                .bottom {
+                    width: 80%;
+                    box-shadow: 0px 0px 10px rgba(0,0,0,.25);
+                    border-radius: .5rem;
+                    background-color: whitesmoke;
+                    margin-bottom: 5rem;
+
+                    table {
+                        width: 100%;
+
+                        .table-header {
+                            height: 60px;
+                            background-color: rgb(241, 241, 241);
+                            box-shadow: 0px 5px 5px rgba(0,0,0,.1);
+                            color: rgb(61, 61, 61);
+
+                            #t-row {
+                                width: 10%;
+                            }
+
+                            #t-money-type {
+                                width: 15%;
+                            }
+
+                            #t-date {
+                                width: 20%;
+                            }
+
+                            #t-money {
+                                width: 20%;
+                            }
+
+                            #t-info {
+                                width: 35%;
+                            }
+                        }
+
+                        .t-list {
+                            text-align: center;
+                            height: 60px;
+                            margin-top: 1rem;
+
+                            td {
+                                .table-remove-btn {
+                                    margin: 0 .5rem;
+                                    border: 1px solid rgb(255, 34, 34);
+                                    padding: .5rem 1rem;
+                                    border-radius: 5px;
+                                    font-family: "Vazir";
+                                    font-weight: bold;
+                                    cursor: pointer;
+                                }
+
+                                .table-show-btn {
+                                    margin: 0 .5rem;
+                                    background-color: rgb(48, 25, 255);
+                                    border: none;
+                                    padding: .5rem 1rem;
+                                    font-family: "Vazir";
+                                    font-weight: bold;
+                                    color: white;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .modal-show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .modal-main {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+    
+            .modal-bg {
+                background-color: rgba(0,0,0,.5);
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                backdrop-filter: blur(5px);
+            }
+
+            .modal-content-remove {
+                width: 40%;
+                height: 40%;
+                background-color: rgb(240, 240, 240);
+                position: absolute;
+                top: 50%;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .row1-remove {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 2rem;
+
+                    span {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        align-items: center;
+                        font-size: large;
+                        background-color: rgb(238, 52, 52);
+                        padding: .5rem 1rem;
+                        position: relative;
+                        top: -25px;
+                        left: -50px;
+                        color: white;
+                        border-radius: 10px;
+                        box-shadow: 2.5px 2.5px 2.5px rgba(0,0,0,.5);
+                        cursor: pointer;
+                        
+                        i {
+                            position: relative;
+                            top: 2px;
+                            margin-left: .5rem;
+                        }
+                    }
+
+                    h3 {
+                        position: relative;
+                        top: 5px;
+                        font-size: larger;
+                    }
+                }
+
+                .row2-remove {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    text-align: center;
+
+                    p {
+                        font-size: large;
+                    }
+                }
+
+                .row3-remove {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 3rem;
+                    width: 100%;
+                    margin-top: 1.5rem;
+
+                    #remove-modal-remove-btn {
+                        width: 30%;
+                        margin: 0 1rem;
+                        padding: .5rem 0;
+                        font-family: "Vazir";
+                        border: 1px solid rgb(255, 40, 40);
+                        color: black;
+                        border-radius: 5px;
+                        font-size: large;
+                        cursor: pointer;
+                    }
+
+                    #remove-modal-back-btn {
+                        width: 30%;
+                        margin: 0 1rem;
+                        padding: .5rem 0;
+                        font-family: "Vazir";
+                        background-color: rgb(40, 40, 255);
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: large;
+                        cursor: pointer;
+                    }
+
+                    #remove-modal-back-btn:hover {
+                        background-color: blue;
+                    }
+
+                }
+            }
+
+            .modal-content-show {
+                width: 40%;
+                height: 50%;
+                background-color: rgb(240, 240, 240);
+                position: absolute;
+                top: 40%;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .row1-show {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 2rem;
+
+                    span {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        align-items: center;
+                        font-size: large;
+                        background-color: rgb(238, 52, 52);
+                        padding: .5rem 1rem;
+                        position: relative;
+                        top: -25px;
+                        left: -50px;
+                        color: white;
+                        border-radius: 10px;
+                        box-shadow: 2.5px 2.5px 2.5px rgba(0,0,0,.5);
+                        cursor: pointer;
+                        
+                        i {
+                            position: relative;
+                            top: 2px;
+                            margin-left: .5rem;
+                        }
+                    }
+
+                    h3 {
+                        position: relative;
+                        top: 5px;
+                        font-size: larger;
+                    }
+                }
+
+                .row2-show {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    text-align: center;
+                    overflow: hidden;
+
+                    p {
+                        font-size: large;
+                        padding: 0 2rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                .row3-show {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 1.5rem;
+                    width: 100%;
+                    margin-top: 1rem;
+
+                    #show-modal-back-btn {
+                        width: 70%;
+                        margin: 0 1rem;
+                        padding: .5rem 0;
+                        font-family: "Vazir";
+                        background-color: rgb(40, 40, 255);
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: large;
+                        cursor: pointer;
+                    }
+
+                    #show-modal-back-btn:hover {
+                        background-color: blue;
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,948 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+html body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Vazir";
+  position: relative;
+}
+
+html body .alert-show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+html body .alert-hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+html body .alert {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 2rem;
+  background-color: #ff5959;
+  padding: 1rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  width: 25%;
+  z-index: 10;
+}
+
+html body .alert .alert-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .alert .alert-container progress {
+  width: 100%;
+  position: relative;
+  top: 10px;
+}
+
+html body .alert .alert-container progress[value]::-webkit-progress-bar {
+  background-color: red;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 255, 255, 0.25) inset;
+          box-shadow: 0 2px 5px rgba(255, 255, 255, 0.25) inset;
+}
+
+html body .alert .alert-container .alert-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+html body .alert .alert-container .alert-text i {
+  font-size: xx-large;
+  color: white;
+}
+
+html body .alert .alert-container .alert-text span {
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  text-align: right;
+  margin-left: 1rem;
+}
+
+html body .main {
+  width: 100%;
+  height: 100%;
+}
+
+html body .main .bg {
+  width: 100%;
+  height: 25%;
+  background-image: url(./img/header1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+html body .main .bg img {
+  width: 100%;
+  height: 100%;
+}
+
+html body .main .container {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .main .container .top {
+  width: 80%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  top: -50px;
+}
+
+html body .main .container .top .right {
+  width: 45%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: .5rem;
+  background-color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body .main .container .top .right .money-type-selector {
+  width: 80%;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .main .container .top .right .money-type-selector .input {
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 5px;
+  padding: .25rem .5rem .25rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+html body .main .container .top .right .money-type-selector .input input {
+  position: relative;
+  top: 2.5px;
+  margin-right: .5rem;
+}
+
+html body .main .container .top .right .money-type-selector .output {
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 5px;
+  padding: .25rem .5rem .25rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  position: relative;
+  right: 60px;
+}
+
+html body .main .container .top .right .money-type-selector .output input {
+  position: relative;
+  top: 2.5px;
+  margin-right: .5rem;
+}
+
+html body .main .container .top .right .money-count {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body .main .container .top .right .money-count input {
+  text-align: right;
+  font-family: "Vazir";
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  height: 25px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: .25rem 1rem;
+  font-weight: bold;
+  color: #363636;
+}
+
+html body .main .container .top .right .money-count input::-webkit-outer-spin-button,
+html body .main .container .top .right .money-count input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+html body .main .container .top .right .money-count input[type=number] {
+  -moz-appearance: textfield;
+}
+
+html body .main .container .top .right .money-count span {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 2rem;
+  margin-top: .25rem;
+  display: none;
+}
+
+html body .main .container .top .right .money-count label {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: .75rem;
+  margin-bottom: .5rem;
+}
+
+html body .main .container .top .right .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 78%;
+}
+
+html body .main .container .top .right .date label {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}
+
+html body .main .container .top .right .date .date-inputs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body .main .container .top .right .date .date-inputs input::-webkit-outer-spin-button,
+html body .main .container .top .right .date .date-inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+html body .main .container .top .right .date .date-inputs input[type=number] {
+  -moz-appearance: textfield;
+}
+
+html body .main .container .top .right .date .date-inputs input {
+  width: 30%;
+  text-align: center;
+  font-family: "Vazir";
+  border-radius: 5px;
+  padding: .25rem 0;
+  padding-top: .5rem;
+  border: 1px solid gray;
+  font-weight: bold;
+  color: #363636;
+}
+
+html body .main .container .top .right .date .date-inputs input::-webkit-input-placeholder {
+  position: relative;
+  top: -3px;
+}
+
+html body .main .container .top .right .date .date-inputs input:-ms-input-placeholder {
+  position: relative;
+  top: -3px;
+}
+
+html body .main .container .top .right .date .date-inputs input::-ms-input-placeholder {
+  position: relative;
+  top: -3px;
+}
+
+html body .main .container .top .right .date .date-inputs input::placeholder {
+  position: relative;
+  top: -3px;
+}
+
+html body .main .container .top .right .info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 78%;
+  margin-top: 1.5rem;
+}
+
+html body .main .container .top .right .info-container label {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}
+
+html body .main .container .top .right .info-container .info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body .main .container .top .right .info-container .info textarea {
+  width: 100%;
+  resize: none;
+  height: 100px;
+  padding: 10px;
+  font-family: "Vazir";
+  text-align: right;
+  font-weight: bold;
+  color: #363636;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+html body .main .container .top .right button {
+  margin-top: 2rem;
+  width: 78%;
+  padding: .5rem 0;
+  border: none;
+  background-color: #14aa14;
+  font-family: "Vazir";
+  font-size: large;
+  font-weight: 500;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+html body .main .container .top .right button:hover {
+  background-color: green;
+}
+
+html body .main .container .top .right button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: .1s ease;
+  transition: .1s ease;
+}
+
+html body .main .container .top .right .money-count-display {
+  text-align: right;
+  width: 78%;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: small;
+  color: #14aa14;
+  direction: rtl;
+}
+
+html body .main .container .top .left {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body .main .container .top .left .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2rem 0;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: .5rem;
+  margin-bottom: 2rem;
+}
+
+html body .main .container .top .left .header .breaker {
+  width: 2px;
+  height: 100%;
+  background-color: rgba(122, 122, 122, 0.5);
+  border-radius: 1rem;
+}
+
+html body .main .container .top .left .header .input-number {
+  width: 40%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+html body .main .container .top .left .header .input-number #user-income {
+  direction: rtl;
+}
+
+html body .main .container .top .left .header .input-number h2 {
+  color: #474747;
+  margin: 0;
+}
+
+html body .main .container .top .left .header .input-number span {
+  font-size: x-large;
+  color: #11b811;
+  font-weight: bold;
+  margin-top: .5rem;
+}
+
+html body .main .container .top .left .header .output-number {
+  width: 40%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+html body .main .container .top .left .header .output-number #user-outcome {
+  direction: rtl;
+}
+
+html body .main .container .top .left .header .output-number h2 {
+  color: #474747;
+  margin: 0;
+}
+
+html body .main .container .top .left .header .output-number span {
+  font-size: x-large;
+  color: #e02f2f;
+  font-weight: bold;
+  margin-top: .5rem;
+}
+
+html body .main .container .top .left .chart {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: .5rem;
+}
+
+html body .main .container .bottom {
+  width: 80%;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: .5rem;
+  background-color: whitesmoke;
+  margin-bottom: 5rem;
+}
+
+html body .main .container .bottom table {
+  width: 100%;
+}
+
+html body .main .container .bottom table .table-header {
+  height: 60px;
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  color: #3d3d3d;
+}
+
+html body .main .container .bottom table .table-header #t-row {
+  width: 10%;
+}
+
+html body .main .container .bottom table .table-header #t-money-type {
+  width: 15%;
+}
+
+html body .main .container .bottom table .table-header #t-date {
+  width: 20%;
+}
+
+html body .main .container .bottom table .table-header #t-money {
+  width: 20%;
+}
+
+html body .main .container .bottom table .table-header #t-info {
+  width: 35%;
+}
+
+html body .main .container .bottom table .t-list {
+  text-align: center;
+  height: 60px;
+  margin-top: 1rem;
+}
+
+html body .main .container .bottom table .t-list td .table-remove-btn {
+  margin: 0 .5rem;
+  border: 1px solid #ff2222;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  font-family: "Vazir";
+  font-weight: bold;
+  cursor: pointer;
+}
+
+html body .main .container .bottom table .t-list td .table-show-btn {
+  margin: 0 .5rem;
+  background-color: #3019ff;
+  border: none;
+  padding: .5rem 1rem;
+  font-family: "Vazir";
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+html body .modal-show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+html body .modal-hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+html body .modal-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .modal-main .modal-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+html body .modal-main .modal-content-remove {
+  width: 40%;
+  height: 40%;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 50%;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body .modal-main .modal-content-remove .row1-remove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+}
+
+html body .modal-main .modal-content-remove .row1-remove span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: large;
+  background-color: #ee3434;
+  padding: .5rem 1rem;
+  position: relative;
+  top: -25px;
+  left: -50px;
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.5);
+          box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+html body .modal-main .modal-content-remove .row1-remove span i {
+  position: relative;
+  top: 2px;
+  margin-left: .5rem;
+}
+
+html body .modal-main .modal-content-remove .row1-remove h3 {
+  position: relative;
+  top: 5px;
+  font-size: larger;
+}
+
+html body .modal-main .modal-content-remove .row2-remove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+html body .modal-main .modal-content-remove .row2-remove p {
+  font-size: large;
+}
+
+html body .modal-main .modal-content-remove .row3-remove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+html body .modal-main .modal-content-remove .row3-remove #remove-modal-remove-btn {
+  width: 30%;
+  margin: 0 1rem;
+  padding: .5rem 0;
+  font-family: "Vazir";
+  border: 1px solid #ff2828;
+  color: black;
+  border-radius: 5px;
+  font-size: large;
+  cursor: pointer;
+}
+
+html body .modal-main .modal-content-remove .row3-remove #remove-modal-back-btn {
+  width: 30%;
+  margin: 0 1rem;
+  padding: .5rem 0;
+  font-family: "Vazir";
+  background-color: #2828ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  cursor: pointer;
+}
+
+html body .modal-main .modal-content-remove .row3-remove #remove-modal-back-btn:hover {
+  background-color: blue;
+}
+
+html body .modal-main .modal-content-show {
+  width: 40%;
+  height: 50%;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 40%;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body .modal-main .modal-content-show .row1-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+}
+
+html body .modal-main .modal-content-show .row1-show span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: large;
+  background-color: #ee3434;
+  padding: .5rem 1rem;
+  position: relative;
+  top: -25px;
+  left: -50px;
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.5);
+          box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+html body .modal-main .modal-content-show .row1-show span i {
+  position: relative;
+  top: 2px;
+  margin-left: .5rem;
+}
+
+html body .modal-main .modal-content-show .row1-show h3 {
+  position: relative;
+  top: 5px;
+  font-size: larger;
+}
+
+html body .modal-main .modal-content-show .row2-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+html body .modal-main .modal-content-show .row2-show p {
+  font-size: large;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+html body .modal-main .modal-content-show .row3-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+html body .modal-main .modal-content-show .row3-show #show-modal-back-btn {
+  width: 70%;
+  margin: 0 1rem;
+  padding: .5rem 0;
+  font-family: "Vazir";
+  background-color: #2828ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  cursor: pointer;
+}
+
+html body .modal-main .modal-content-show .row3-show #show-modal-back-btn:hover {
+  background-color: blue;
+}
+/*# sourceMappingURL=style.css.map */
